@@ -6,4 +6,4 @@ track: stable
 # DB information #
 dbHostname: mongodb
 dbUser: root
-dbPass: sybore11
+dbPass: 1234
