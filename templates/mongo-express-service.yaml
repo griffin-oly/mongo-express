@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo-express
+  name: {{ template "fullname" . }}-mongo-express
 spec:
   selector:
-    app: mongo-express
+    app: {{ template "fullname" . }}-mongo-express
     tier: frontend
     track: stable
   type: NodePort
@@ -14,7 +14,7 @@ spec:
     targetPort: 8081
     protocol: TCP
   selector:
-    app: mongo-express
+    app: {{ template "fullname" . }}-mongo-express
     tier: frontend
     track: stable
 status:

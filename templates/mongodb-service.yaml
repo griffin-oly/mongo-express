@@ -13,7 +13,7 @@ spec:
     port: 27017
     targetPort: 27017
   selector:
-    app: mongodb
+    app: {{ template "mongodb.fullname" . }}
     tier: backend
 status:
   loadBalancer: {}
