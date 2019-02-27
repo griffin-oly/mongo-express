@@ -1,8 +1,9 @@
-# Values for program
-#
+# Values for Mongo stack
+# 
+# currently not used
 track: stable
 #
-# DB information
+# DB information #
 dbHostname: mongodb
 dbUser: root
 dbPass: sybore11
