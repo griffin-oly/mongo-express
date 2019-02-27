@@ -3,6 +3,13 @@
 # currently not used
 track: stable
 #
+## mongo image version
+## ref: https://hub.docker.com/_/mongo?tab=tags
+##
+dbimage: "mongo"
+dbimageTag: "4.1.8-xenial"
+
+
 # DB information #
 dbHostname: mongodb
 dbUser: root

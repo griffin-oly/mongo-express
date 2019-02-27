@@ -1,6 +1,6 @@
 name: mongo-stack
 description: A stack with mongo db and mongo-express in a single namespace
-version: 0.1.0
+version: 0.1.3
 keywords:
   - mongo
   - mongodb
@@ -9,4 +9,8 @@ sources:
 - https://hub.docker.com/_/mongo
 - https://hub.docker.com/_/mongo-express
 home: http://mongo-express.castlegriffin.com
-icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+icon: https://www.mysql.com/common/logos/logo-mysql-170x115.png
+
+maintainers:
+- name: Griffin
+  email: ggriffin924@gmail.com
