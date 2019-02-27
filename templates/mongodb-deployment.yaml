@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: mongodb-deployment
+  name: {{ .Release.Name }}-mongodb-dep
 spec:
   replicas: 1
   selector:
@@ -19,9 +19,9 @@ spec:
       containers:
       - env:
         - name: MONGO_INITDB_ROOT_PASSWORD
-          value: sybore11
+          value: {{ .Values.dbPass }}
         - name: MONGO_INITDB_ROOT_USERNAME
-          value: root
+          value: {{ .Values.dbUser }}
         image: mongo:4.1.8-xenial
         name: mongodb
         ports:
