@@ -1,0 +1,9 @@
+name: mongo-stack
+description: A stack with mongo db and mongo-express in a single namespace
+version: 0.0.7
+keywords:
+  - mongo
+  - mongodb
+  - mongo-express
+sources:
+home:

@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mongo-express
+spec:
+  selector:
+    matchLabels:
+      app: mongo-express
+      tier: frontend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mongo-express
+        tier: frontend
+        track: stable
+    spec:
+      containers:
+      - env:
+        - name: ME_CONFIG_MONGODB_ADMINPASSWORD
+          value: {{ .Values.dbPass }}
+        - name: ME_CONFIG_MONGODB_ADMINUSERNAME
+          value: {{ .Values.dbUser }}
+        - name: ME_CONFIG_MONGODB_SERVER
+          value: {{ .Values.dbHostname }}
+        image: mongo-express
+        name: mongo-express
+        ports:
+        - containerPort: 8081
+        resources: {}
+      restartPolicy: Always
+status: {}

@@ -1,0 +1,8 @@
+# Values for program
+#
+track: stable
+#
+# DB information
+dbHostname: mongodb
+dbUser: root
+dbPass: sybore11
