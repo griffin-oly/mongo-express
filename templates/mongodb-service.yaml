@@ -15,5 +15,6 @@ spec:
   selector:
     app: {{ template "mongodb.fullname" . }}
     tier: backend
+    track: stable
 status:
   loadBalancer: {}
